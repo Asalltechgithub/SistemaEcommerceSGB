@@ -1,0 +1,140 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Menu_cli.master.cs" Inherits="WebApplication4.Cliente.Menu_cli" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head id="Head1" runat="server">
+    <title>CSS Free Templates with jQuery Slider</title>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <link rel="shortcut icon" href="../css/images/favicon.ico" />
+    <link rel="stylesheet" href="../css/style.css" type="text/css" media="all" />
+
+    <script src="../js/jquery-1.6.2.min.js" type="text/javascript" charset="utf-8"></script>
+    	<script src="../js/DD_belatedPNG-min.js" type="text/javascript" charset="utf-8"></script>
+	
+    <script src="../js/jquery.jcarousel.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../js/functions.js" type="text/javascript" charset="utf-8"></script>
+    </head>
+<body>
+    <form id="form1" runat="server">
+                <div id="wrapper">
+
+        <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+        <div id="search">
+			<div class="shell">
+				
+					<div class="container">
+						<input type="text" value="Keywords..." title="Keywords..." class="blink" />
+					</div>
+					<input class="search-button" type="submit" value="Submit" />
+				
+				<div class="cl">&nbsp;</div>
+			</div>
+		</div>
+            <!-- Header --> 
+            <div id="header" class="shell">
+                <h1 id="logo">
+                    <asp:DataList ID="DataList1" runat="server" DataSourceID="ds_Logo">
+                        <ItemTemplate>
+                            <br />
+                            <br />
+                            <asp:ImageButton ID="ImageButton1" runat="server" Height="43px" Width="182px" ImageUrl='<%# Eval("Logo_Site") %>' PostBackUrl="~/principal.aspx" />
+                        </ItemTemplate>
+                    </asp:DataList>
+                    <asp:SqlDataSource runat="server" ID="ds_Logo" ConnectionString='<%$ ConnectionStrings:BD_SGBConnectionString %>' SelectCommand="SELECT * FROM [Tb_Logotipo_Empresa]"></asp:SqlDataSource>
+               
+                     </h1>
+                </div>
+               
+
+                <div class="cl">
+                </div>
+            
+
+               
+
+              
+                <!-- END Top Navigation -->
+                
+                    <div class="cl"></div>
+                    
+              
+                    <div id="navigation">
+                        <div class="shell">
+                            <ul>
+                                <li>
+                                    <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/Cliente/Menu_Cli.aspx" Text="Menu Principal" /></li>
+                                <li>
+                                    <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Cliente/Cad_Cliente.aspx" Text="Meus Dados" /></li>
+                                <li>
+                                    <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/Cliente/Historico_Cli.aspx" Text="Histórico" /></li>
+                               
+
+                                <li>
+                                    <asp:Label ID="Label1" runat="server" Text="Label" Visible="False"></asp:Label></li>
+                                <asp:Label ID="Label2" runat="server" Text="Label"></asp:Label>
+                                <li>&nbsp;<asp:LinkButton ID="lnkNomeusu" runat="server">LinkButton</asp:LinkButton>
+                                </li>
+                            </ul>
+                            <div class="cl">&nbsp;</div>
+                        </div>
+                    </div>
+                <div id="main">
+                    <div class="inner">
+				<div class="shell">
+                    <div id="left-sidebar" class="sidebar">
+                        <ul>
+                            <li class="widget">
+                                
+                            </li>
+                            
+                                        </li>
+                                    </ul>
+
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+
+
+
+
+                    <div id="content">
+                        <!-- Begin Post -->
+                        
+                        <!-- End Post -->
+                        <!-- Begin Products -->
+                        <div id="products">
+                            <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+
+
+
+                            </asp:ContentPlaceHolder>
+
+
+                           <div class="cl">&nbsp;</div>
+						</div>
+						<!-- End Products -->
+					</div>
+                   <div class="cl">&nbsp;</div>
+                </div>
+               </div>
+           </div>
+       
+            
+           
+
+
+    </form>
+      <div id="footer">
+            <div class="shell">
+                <p class="bottom-menu"><a href="#" title="Home">Home</a><span>|</span><a href="#" title="Special Offers">Special Offers</a><span>|</span><a href="#" title="Log In">Log In</a><span>|</span><a href="#" title="Account">Account</a><span>|</span><a href="#" title="Basket">Basket</a><span>|</span><a href="#" title="Checkout">Checkout</a><span>|</span><a href="#" title="Contact">Contact</a></p>
+                <p>Copyright &copy; PC Store 2012. Design by: <a href="http://css-free-templates.com/" title="CSS Free Templates">CSS-Free-Templates</a>. All Rights Reserved. </p>
+                <div class="cl">&nbsp;</div>
+            </div>
+        </div>
+</body>
+
+</html>

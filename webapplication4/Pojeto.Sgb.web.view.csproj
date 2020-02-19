@@ -1,0 +1,1291 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2B234706-78CA-402C-A60D-43453463E0D8}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebApplication4</RootNamespace>
+    <AssemblyName>WebApplication4</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=4.5.7.1213, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="AjaxMin, Version=4.97.4951.28478, Culture=neutral, PublicKeyToken=21ef50ce11b5d80f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\ajax tool kit\AjaxMin.dll</HintPath>
+    </Reference>
+    <Reference Include="Boleto.Net">
+      <HintPath>..\..\..\Downloads\Boleto.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="HtmlAgilityPack, Version=1.4.6.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\ajax tool kit\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp">
+      <HintPath>..\..\..\..\..\Desktop\itetxsharp\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp.pdfa">
+      <HintPath>..\..\..\..\..\Desktop\itetxsharp\itextsharp.pdfa.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp.xtra">
+      <HintPath>..\..\..\..\..\Desktop\itetxsharp\itextsharp.xtra.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Data.Edm, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\ajax tool kit\Microsoft.Data.Edm.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.OData, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\ajax tool kit\Microsoft.Data.OData.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAzure.Configuration, Version=1.8.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\ajax tool kit\Microsoft.WindowsAzure.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAzure.Storage, Version=2.1.0.3, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\ajax tool kit\Microsoft.WindowsAzure.Storage.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Spatial, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\ajax tool kit\System.Spatial.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DataVisualization" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Windows.Forms.DataVisualization.Design" />
+    <Reference Include="System.Windows.Input.Manipulations" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="WebMatrix.Data, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="WebMatrix.WebData, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="001.jpg" />
+    <Content Include="009_o_que_e_boleto_bancario.jpg" />
+    <Content Include="Administrativo\Add_Cargo.aspx" />
+    <Content Include="Administrativo\add_categorias_marcas.aspx" />
+    <Content Include="Administrativo\Cad_Promocao.aspx" />
+    <Content Include="Administrativo\contatar_Fornecedor.aspx" />
+    <Content Include="Administrativo\Control_prevenda.aspx" />
+    <Content Include="Administrativo\Detalhe_Pre_vendas.aspx" />
+    <Content Include="Administrativo\Edit_Site.aspx" />
+    <Content Include="Administrativo\ADM\Relatorios\Detalhe_Venda.aspx" />
+    <Content Include="Administrativo\ADM\Relatorios\Menu_Relatorios.aspx" />
+    <Content Include="Administrativo\ADM\Relatorios\Prod_mais_Vend.aspx" />
+    <Content Include="Administrativo\ADM\Relatorios\Rel_Cli.aspx" />
+    <Content Include="Administrativo\ADM\Relatorios\Rel_prod_enviados.aspx" />
+    <Content Include="Administrativo\ADM\Relatorios\Rel_Vendas.aspx" />
+    <Content Include="Administrativo\ADM\Relatorios\Rel_Produtos.aspx" />
+    <Content Include="Administrativo\ADM\Relatorios\Rel_func.aspx" />
+    <Content Include="Administrativo\ADM\Relatorios\Rl_Cli_Compraram_mais.aspx" />
+    <Content Include="Administrativo\Avisos.aspx" />
+    <Content Include="Administrativo\Detalhe_Pedido.aspx" />
+    <Content Include="Administrativo\Envio de_Prevendas.aspx" />
+    <Content Include="Administrativo\MsgPedidoFinalizado.aspx" />
+    <Content Include="Administrativo\Consultar_Cliente.aspx" />
+    <Content Include="Administrativo\MsgPedidoEnviado.aspx" />
+    <Content Include="Administrativo\Nota_Fiscal.aspx" />
+    <Content Include="Administrativo\Produtos_para_Envio.aspx" />
+    <Content Include="Administrativo\Pedidos.aspx" />
+    <Content Include="Administrativo\WebForm1.aspx" />
+    <Content Include="Boleto.aspx" />
+    <Content Include="btnAdd.gif" />
+    <Content Include="CadCliente.aspx" />
+    <Content Include="Carrega_foto.ascx" />
+    <Content Include="Carrinho_de_Compras.aspx" />
+    <Content Include="Cart.aspx" />
+    <Content Include="Cliente\Cad_Cliente.aspx" />
+    <Content Include="Administrativo\Cad_Fornecedor.aspx" />
+    <Content Include="Administrativo\Cad_funcionario.aspx" />
+    <Content Include="Administrativo\Cad_Produtos.aspx" />
+    <Content Include="Administrativo\Consultar_Prod.aspx" />
+    <Content Include="Cliente\Historico_Cli.aspx" />
+    <Content Include="Cliente\Menu_Cli.aspx" />
+    <Content Include="Contato.aspx" />
+    <Content Include="Controls\MenuMarca.ascx" />
+    <Content Include="Controls\Pre_venda.ascx" />
+    <Content Include="Copy of Msg_Alterar_Prod.aspx" />
+    <Content Include="css\fonts\myriadpro-semiboldcond-webfont.svg" />
+    <Content Include="css\images\body-bg.png" />
+    <Content Include="css\images\cart-items-sep.png" />
+    <Content Include="css\images\favicon.ico" />
+    <Content Include="css\images\featured-img1.jpg" />
+    <Content Include="css\images\featured-img2.jpg" />
+    <Content Include="css\images\featured-img3.jpg" />
+    <Content Include="css\images\featured-img4.jpg" />
+    <Content Include="css\images\featured-img5.jpg" />
+    <Content Include="css\images\featured-img6.jpg" />
+    <Content Include="css\images\footer-bg.png" />
+    <Content Include="css\images\logo.png" />
+    <Content Include="css\images\main-bottom.png" />
+    <Content Include="css\images\main-top.png" />
+    <Content Include="css\images\nav-bg.png" />
+    <Content Include="css\images\nav-item.png" />
+    <Content Include="css\images\product-bg.png" />
+    <Content Include="css\images\product-img1.jpg" />
+    <Content Include="css\images\product-img2.jpg" />
+    <Content Include="css\images\product-img3.jpg" />
+    <Content Include="css\images\product-img4.jpg" />
+    <Content Include="css\images\product-img5.jpg" />
+    <Content Include="css\images\product-img6.jpg" />
+    <Content Include="css\images\product-img7.jpg" />
+    <Content Include="css\images\product-img8.jpg" />
+    <Content Include="css\images\product-img9.jpg" />
+    <Content Include="css\images\search-bg.png" />
+    <Content Include="css\images\search-button.png" />
+    <Content Include="css\images\search-field.png" />
+    <Content Include="css\images\select-arrow.png" />
+    <Content Include="css\images\side-img1.jpg" />
+    <Content Include="css\images\side-img10.jpg" />
+    <Content Include="css\images\side-img2.jpg" />
+    <Content Include="css\images\side-img3.jpg" />
+    <Content Include="css\images\side-img4.jpg" />
+    <Content Include="css\images\side-img5.jpg" />
+    <Content Include="css\images\side-img6.jpg" />
+    <Content Include="css\images\side-img7.jpg" />
+    <Content Include="css\images\side-img8.jpg" />
+    <Content Include="css\images\side-img9.jpg" />
+    <Content Include="css\images\slide-img1.jpg" />
+    <Content Include="css\images\slide-left.png" />
+    <Content Include="css\images\slide-more.png" />
+    <Content Include="css\images\slide-right.png" />
+    <Content Include="css\images\slider-bg.png" />
+    <Content Include="css\images\slider-control.png" />
+    <Content Include="css\images\slider-shadows.png" />
+    <Content Include="css\images\title-bottom.png" />
+    <Content Include="css\images\title-top.png" />
+    <Content Include="css\images\widget-arrow.png" />
+    <Content Include="css\images\widget-item.png" />
+    <Content Include="css\images\widget-sep.png" />
+    <Content Include="css\images\widget-title.png" />
+    <Content Include="css\images\widgets-left-bg.png" />
+    <Content Include="css\images\widgets-right-bg.png" />
+    <Content Include="css\images\wrapper-bg.png" />
+    <Content Include="css\style.css" />
+    <Content Include="Descricao_Prod.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="home.html" />
+    <Content Include="Imagens\american_express.png" />
+    <Content Include="Imagens\Aparelhos\Cabo Para o controle do Ps3.jpg" />
+    <Content Include="Imagens\Aparelhos\Controle do Ps4.jpg" />
+    <Content Include="Imagens\Aparelhos\controle Ps3.jpg" />
+    <Content Include="Imagens\Aparelhos\Controle XBox 360.jpg" />
+    <Content Include="Imagens\Aparelhos\Controle Xbox One.jpg" />
+    <Content Include="Imagens\Aparelhos\Guitar Ps3.jpg" />
+    <Content Include="Imagens\Aparelhos\Guitarra do Gutar Hero.jpg" />
+    <Content Include="Imagens\Aparelhos\Guitarra sem fio.jpg" />
+    <Content Include="Imagens\Aparelhos\Guitarra Xbox 360.jpg" />
+    <Content Include="Imagens\Aparelhos\Instrumentos do Guitar Hero.jpg" />
+    <Content Include="Imagens\Aparelhos\Kinect xbox 360.jpg" />
+    <Content Include="Imagens\Aparelhos\Ps Move Ps3.jpg" />
+    <Content Include="Imagens\Aparelhos\Ps3.jpg" />
+    <Content Include="Imagens\Aparelhos\Ps4.jpg" />
+    <Content Include="Imagens\Aparelhos\XBox 360.jpg" />
+    <Content Include="Imagens\Aparelhos\Xbox One.jpg" />
+    <Content Include="Imagens\Imagem banner\ps3slide.png" />
+    <Content Include="Imagens\Imagem banner\ps4slide.png" />
+    <Content Include="Imagens\Imagem banner\psvitaslide.png" />
+    <Content Include="Imagens\Imagem banner\slidexbox360.png" />
+    <Content Include="Imagens\Imagem banner\XOneslide.png" />
+    <Content Include="Imagens\Jogo de XBox One - Alian Isolation.jpg" />
+    <Content Include="Imagens\Jogo de XBox One - Assassins Creed 4 Black Flag.jpg" />
+    <Content Include="Imagens\Jogo de XBox One - Assassins Creed Unity.jpg" />
+    <Content Include="Imagens\Jogo de XBox One - Battlefield 4.jpg" />
+    <Content Include="Imagens\Jogo de XBox One - Battlefield Hardline.jpg" />
+    <Content Include="Imagens\Jogo de XBox One - Call Of Dutty Ghosts.jpg" />
+    <Content Include="Imagens\Jogo de XBox One - Dead Island 2.jpg" />
+    <Content Include="Imagens\Jogo de XBox One - Dead Rising 2.jpg" />
+    <Content Include="Imagens\Jogo de XBox One - Devil May Cry.jpg" />
+    <Content Include="Imagens\Jogo de XBox One - Diablo 3.jpg" />
+    <Content Include="Imagens\Jogo de XBox One - Dragon Age Inquisition.jpg" />
+    <Content Include="Imagens\Jogo de XBox One - Dragon Ball XV.jpg" />
+    <Content Include="Imagens\Jogo de XBox One - Far Cry 4.jpg" />
+    <Content Include="Imagens\Jogo de XBox One - Fifa 15.jpg" />
+    <Content Include="Imagens\Jogo de XBox One - Fighter Within.jpg" />
+    <Content Include="Imagens\Jogo de XBox One - Forza 5.jpg" />
+    <Content Include="Imagens\Jogo de XBox One - Forza Horizon 2.jpg" />
+    <Content Include="Imagens\Jogo de XBox One - Garden Werfare.jpg" />
+    <Content Include="Imagens\Jogo de XBox One - GTA5.jpg" />
+    <Content Include="Imagens\Jogo de XBox One - Halo.jpg" />
+    <Content Include="Imagens\Jogo de XBox One - Jogo de XBox One - UFC.jpg" />
+    <Content Include="Imagens\Jogo de XBox One - Just Dance 2014.jpg" />
+    <Content Include="Imagens\Jogo de XBox One - Killer Instinct.jpg" />
+    <Content Include="Imagens\Jogo de XBox One - Kinect Sports Rivals.jpg" />
+    <Content Include="Imagens\Jogo de XBox One - Lego Hobbit.jpg" />
+    <Content Include="Imagens\Jogo de XBox One - Lego Marvel Super Heroes.jpg" />
+    <Content Include="Imagens\Jogo de XBox One - Lord Of The Fallen.jpg" />
+    <Content Include="Imagens\Jogo de XBox One - Madden 15.jpg" />
+    <Content Include="Imagens\Jogo de XBox One - Metal Gear Solid.jpg" />
+    <Content Include="Imagens\Jogo de XBox One - Minecraft.jpg" />
+    <Content Include="Imagens\Jogo de XBox One - Mortal Kombat x.jpg" />
+    <Content Include="Imagens\Jogo de XBox One - Murderen.jpg" />
+    <Content Include="Imagens\Jogo de XBox One - NHL15.jpg" />
+    <Content Include="Imagens\Jogo de XBox One - Perfect Dark.jpg" />
+    <Content Include="Imagens\Jogo de XBox One - Pes  2015.jpg" />
+    <Content Include="Imagens\Jogo de XBox One - Project Spark.jpg" />
+    <Content Include="Imagens\Jogo de XBox One - Quantium Break.jpg" />
+    <Content Include="Imagens\Jogo de XBox One - Quatum Break.jpg" />
+    <Content Include="Imagens\Jogo de XBox One - Raymen Legends.jpg" />
+    <Content Include="Imagens\Jogo de XBox One - Ride.jpg" />
+    <Content Include="Imagens\Jogo de XBox One - Rugby 15.jpg" />
+    <Content Include="Imagens\Jogo de XBox One - Ryse.jpg" />
+    <Content Include="Imagens\Jogo de XBox One - ScaleBound.jpg" />
+    <Content Include="Imagens\Jogo de XBox One - Sniper Elite 3.jpg" />
+    <Content Include="Imagens\Jogo de XBox One - The Amazing Spider Man 2.jpg" />
+    <Content Include="Imagens\Jogo de XBox One - The Elder Scrolls.jpg" />
+    <Content Include="Imagens\Jogo de XBox One - The walk Dead.jpg" />
+    <Content Include="Imagens\Jogo de XBox One - The Witcher 3 Wild Hunt.jpg" />
+    <Content Include="Imagens\Jogo de XBox One - Titanfall.jpg" />
+    <Content Include="Imagens\Jogo de XBox One - Tomb Raider.jpg" />
+    <Content Include="Imagens\Jogo de XBox One - Transformers.jpg" />
+    <Content Include="Imagens\Jogo de XBox One - TrialsFusion.jpg" />
+    <Content Include="Imagens\Jogo de XBox One - Watch Dogs.jpg" />
+    <Content Include="Imagens\Jogo PS4 - A Realm Reborn.jpg" />
+    <Content Include="Imagens\Jogo PS4 - Assassins Creed 4 Black Flag.jpg" />
+    <Content Include="Imagens\Jogo PS4 - Assassins Creed Unity.jpg" />
+    <Content Include="Imagens\Jogo PS4 - Battlefield 4.jpg" />
+    <Content Include="Imagens\Jogo PS4 - Battlefield Hardline.jpg" />
+    <Content Include="Imagens\Jogo PS4 - Bloodborne.jpg" />
+    <Content Include="Imagens\Jogo PS4 - BorderLands.jpg" />
+    <Content Include="Imagens\Jogo PS4 - CaLL  Of Duty Ghost.jpg" />
+    <Content Include="Imagens\Jogo PS4 - Call of Duty Advanced Warfare.jpg" />
+    <Content Include="Imagens\Jogo PS4 - Dark Souls 2.jpg" />
+    <Content Include="Imagens\Jogo PS4 - Dead Island 2.jpg" />
+    <Content Include="Imagens\Jogo PS4 - Deception 4.jpg" />
+    <Content Include="Imagens\Jogo PS4 - Destiniy.jpg" />
+    <Content Include="Imagens\Jogo PS4 - Dragon Age Inquisition.jpg" />
+    <Content Include="Imagens\Jogo PS4 - DragonBall XV.jpg" />
+    <Content Include="Imagens\Jogo PS4 - DriveClub.jpg" />
+    <Content Include="Imagens\Jogo PS4 - Far cry 4.jpg" />
+    <Content Include="Imagens\Jogo PS4 - Fifa 15.jpg" />
+    <Content Include="Imagens\Jogo PS4 - Final Fantasy.jpg" />
+    <Content Include="Imagens\Jogo PS4 - Garden Warfare.jpg" />
+    <Content Include="Imagens\Jogo PS4 - GTA 5.jpg" />
+    <Content Include="Imagens\Jogo PS4 - HomeFront the rev.jpg" />
+    <Content Include="Imagens\Jogo PS4 - Infamous Second Son.jpg" />
+    <Content Include="Imagens\Jogo PS4 - Injustice.jpg" />
+    <Content Include="Imagens\Jogo PS4 - Just Dance 2014.jpg" />
+    <Content Include="Imagens\Jogo PS4 - Kilzone Shadow Fall.jpg" />
+    <Content Include="Imagens\Jogo PS4 - Knack.jpg" />
+    <Content Include="Imagens\Jogo PS4 - Lego Hobbit.jpg" />
+    <Content Include="Imagens\Jogo PS4 - Lego Marvel Super Heroes.jpg" />
+    <Content Include="Imagens\Jogo PS4 - Little Big Planet 3.jpg" />
+    <Content Include="Imagens\Jogo PS4 - Lords Fallen.jpg" />
+    <Content Include="Imagens\Jogo PS4 - Madden 25.jpg" />
+    <Content Include="Imagens\Jogo PS4 - Metro Redux.jpg" />
+    <Content Include="Imagens\Jogo PS4 - Mortal Kombat X.jpg" />
+    <Content Include="Imagens\Jogo PS4 - Moto Gp 14.jpg" />
+    <Content Include="Imagens\Jogo PS4 - Nba2K14.jpg" />
+    <Content Include="Imagens\Jogo PS4 - Need for Speed Rivals.jpg" />
+    <Content Include="Imagens\Jogo PS4 - Outlast.jpg" />
+    <Content Include="Imagens\Jogo PS4 - Pes 2015.jpg" />
+    <Content Include="Imagens\Jogo PS4 - Rayman Legends.jpg" />
+    <Content Include="Imagens\Jogo PS4 - Ride.jpg" />
+    <Content Include="Imagens\Jogo PS4 - Rocksmith.jpg" />
+    <Content Include="Imagens\Jogo PS4 - Sniper Elite.jpg" />
+    <Content Include="Imagens\Jogo PS4 - Sombras De Mordor.jpg" />
+    <Content Include="Imagens\Jogo PS4 - Street Fighters.jpg" />
+    <Content Include="Imagens\Jogo PS4 - The Crew.jpg" />
+    <Content Include="Imagens\Jogo PS4 - The Division.jpg" />
+    <Content Include="Imagens\Jogo PS4 - The Evil Within.jpg" />
+    <Content Include="Imagens\Jogo PS4 - The Last Of Us.jpg" />
+    <Content Include="Imagens\Jogo PS4 - The Witcher.jpg" />
+    <Content Include="Imagens\Jogo PS4 - Tomb Raider.jpg" />
+    <Content Include="Imagens\Jogo PS4 - Trials Fusion.jpg" />
+    <Content Include="Imagens\Jogo PS4 - UFC.jpg" />
+    <Content Include="Imagens\Jogo PS4 - W2K15.jpg" />
+    <Content Include="Imagens\Jogo PS4 - What dogs.jpg" />
+    <Content Include="Imagens\Jogo PS4 - Wolfenstein.jpg" />
+    <Content Include="Imagens\Jogos de PS3 - Alpha.jpg" />
+    <Content Include="Imagens\Jogos de PS3 - Army of TWo.jpg" />
+    <Content Include="Imagens\Jogos de PS3 - Assassins Creed 1.jpg" />
+    <Content Include="Imagens\Jogos de PS3 - Assassins Creed 2.jpg" />
+    <Content Include="Imagens\Jogos de PS3 - Assassins Creed 3.jpg" />
+    <Content Include="Imagens\Jogos de PS3 - Assassins Creed 4 Blck Flag.jpg" />
+    <Content Include="Imagens\Jogos de PS3 - Assassins Creed Brothehood.jpg" />
+    <Content Include="Imagens\Jogos de PS3 - Assassins Creed Ezio Triology.jpg" />
+    <Content Include="Imagens\Jogos de PS3 - Assassins Creed Reveletions.jpg" />
+    <Content Include="Imagens\Jogos de PS3 - Assassins Creed Rogue.jpg" />
+    <Content Include="Imagens\Jogos de PS3 - Batman Arkham Aslum.jpg" />
+    <Content Include="Imagens\Jogos de PS3 - Batman Arkham Origens.jpg" />
+    <Content Include="Imagens\Jogos de PS3 - Batman Arkhan City.jpg" />
+    <Content Include="Imagens\Jogos de PS3 - Battlefield 2.jpg" />
+    <Content Include="Imagens\Jogos de PS3 - Battlefield 3.jpg" />
+    <Content Include="Imagens\Jogos de PS3 - Battlefield 4.jpg" />
+    <Content Include="Imagens\Jogos de PS3 - Battlefiele Hardline.jpg" />
+    <Content Include="Imagens\Jogos de PS3 - Bayoneta.jpg" />
+    <Content Include="Imagens\Jogos de PS3 - Beyound.jpg" />
+    <Content Include="Imagens\Jogos de PS3 - Bioshock.jpg" />
+    <Content Include="Imagens\Jogos de PS3 - Bleach.jpg" />
+    <Content Include="Imagens\Jogos de PS3 - Blur.jpg" />
+    <Content Include="Imagens\Jogos de PS3 - call of duty advanced warfare.jpg" />
+    <Content Include="Imagens\Jogos de PS3 - Call of Duty Black Ops 2.jpg" />
+    <Content Include="Imagens\Jogos de PS3 - Call of Duty Black Ops.jpg" />
+    <Content Include="Imagens\Jogos de PS3 - Call of Duty Ghost.jpg" />
+    <Content Include="Imagens\Jogos de PS3 - Call of Duty MW3.jpg" />
+    <Content Include="Imagens\Jogos de PS3 - Capitão america.jpg" />
+    <Content Include="Imagens\Jogos de PS3 - Cavaleiros do Zodiaco.jpg" />
+    <Content Include="Imagens\Jogos de PS3 - Crysis 2.jpg" />
+    <Content Include="Imagens\Jogos de PS3 - Crysis 3.jpg" />
+    <Content Include="Imagens\Jogos de PS3 - Dragon Bal XV Xenoverse.jpg" />
+    <Content Include="Imagens\Jogos de PS3 - Dragon Ball Z battle of z.jpg" />
+    <Content Include="Imagens\Jogos de PS3 - Far cry 4.jpg" />
+    <Content Include="Imagens\Jogos de PS3 - FarCry 2.jpg" />
+    <Content Include="Imagens\Jogos de PS3 - farcry 3.jpg" />
+    <Content Include="Imagens\Jogos de PS3 - Fifa 2015.jpg" />
+    <Content Include="Imagens\Jogos de PS3 - Fifa Street 3.jpg" />
+    <Content Include="Imagens\Jogos de PS3 - Fifa Street 4.jpg" />
+    <Content Include="Imagens\Jogos de PS3 - flashback.jpg" />
+    <Content Include="Imagens\Jogos de PS3 - Formula 2014.jpg" />
+    <Content Include="Imagens\Jogos de PS3 - God of War 3.jpg" />
+    <Content Include="Imagens\Jogos de PS3 - God of War Ascension.jpg" />
+    <Content Include="Imagens\Jogos de PS3 - God of War Colection.jpg" />
+    <Content Include="Imagens\Jogos de PS3 - Gran Turismo 5.jpg" />
+    <Content Include="Imagens\Jogos de PS3 - Gran Turismo 6.jpg" />
+    <Content Include="Imagens\Jogos de PS3 - grand theft auto 4.jpg" />
+    <Content Include="Imagens\Jogos de PS3 - GTA 5.jpg" />
+    <Content Include="Imagens\Jogos de PS3 - Guitar Hero 3.jpg" />
+    <Content Include="Imagens\Jogos de PS3 - Guitar Hero 5.jpg" />
+    <Content Include="Imagens\Jogos de PS3 - Guitar Hero 6.jpg" />
+    <Content Include="Imagens\Jogos de PS3 - Guitar Hero Metalica.jpg" />
+    <Content Include="Imagens\Jogos de PS3 - Guitar Hero World Tour.jpg" />
+    <Content Include="Imagens\Jogos de PS3 - Heavenlly sword.jpg" />
+    <Content Include="Imagens\Jogos de PS3 - Hevy Rain.jpg" />
+    <Content Include="Imagens\Jogos de PS3 - hulk.jpg" />
+    <Content Include="Imagens\Jogos de PS3 - Ico Shadow of Colossus.jpg" />
+    <Content Include="Imagens\Jogos de PS3 - Infamous 2.jpg" />
+    <Content Include="Imagens\Jogos de PS3 - Infamous.jpg" />
+    <Content Include="Imagens\Jogos de PS3 - Injustice.jpg" />
+    <Content Include="Imagens\Jogos de PS3 - Iron Man.jpg" />
+    <Content Include="Imagens\Jogos de PS3 - Journey.jpg" />
+    <Content Include="Imagens\Jogos de PS3 - Just Cause 2.jpg" />
+    <Content Include="Imagens\Jogos de PS3 - Killzone 2.jpg" />
+    <Content Include="Imagens\Jogos de PS3 - Kilzone 3.jpg" />
+    <Content Include="Imagens\Jogos de PS3 - l.a.Noire.jpg" />
+    <Content Include="Imagens\Jogos de PS3 - Madagascar 3.jpg" />
+    <Content Include="Imagens\Jogos de PS3 - Marvel Ultimate Alliance 2.jpg" />
+    <Content Include="Imagens\Jogos de PS3 - Marvel vcs Capcom 3.jpg" />
+    <Content Include="Imagens\Jogos de PS3 - Mass 2 Effect.jpg" />
+    <Content Include="Imagens\Jogos de PS3 - Medal of Honor.jpg" />
+    <Content Include="Imagens\Jogos de PS3 - mxgp.jpg" />
+    <Content Include="Imagens\Jogos de PS3 - naruto ultimate ni strm 2.jpg" />
+    <Content Include="Imagens\Jogos de PS3 - Naruto Ultimate Ninja Revolution.jpg" />
+    <Content Include="Imagens\Jogos de PS3 - Naruto Ultimate Ninja Storm 1.jpg" />
+    <Content Include="Imagens\Jogos de PS3 - Naruto Ultimate Ninja Storm generation.jpg" />
+    <Content Include="Imagens\Jogos de PS3 - Naruto ultimate ninja strom 3.jpg" />
+    <Content Include="Imagens\Jogos de PS3 - Neo Peace.jpg" />
+    <Content Include="Imagens\Jogos de PS3 - O Espetacular Homem Aranha 2.jpg" />
+    <Content Include="Imagens\Jogos de PS3 - PayDay2.jpg" />
+    <Content Include="Imagens\Jogos de PS3 - PES 2015.jpg" />
+    <Content Include="Imagens\Jogos de PS3 - Playstation Alll star.jpg" />
+    <Content Include="Imagens\Jogos de PS3 - Prince Of Persia.jpg" />
+    <Content Include="Imagens\Jogos de PS3 - Prototype 2.jpg" />
+    <Content Include="Imagens\Jogos de PS3 - Prototype.jpg" />
+    <Content Include="Imagens\Jogos de PS3 - resident Evil.jpg" />
+    <Content Include="Imagens\Jogos de PS3 - Rio.jpg" />
+    <Content Include="Imagens\Jogos de PS3 - Saw.jpg" />
+    <Content Include="Imagens\Jogos de PS3 - Silent Hill.jpg" />
+    <Content Include="Imagens\Jogos de PS3 - Skate 3.jpg" />
+    <Content Include="Imagens\Jogos de PS3 - Sniper Elite.jpg" />
+    <Content Include="Imagens\Jogos de PS3 - South Park.jpg" />
+    <Content Include="Imagens\Jogos de PS3 - SSX.jpg" />
+    <Content Include="Imagens\Jogos de PS3 - tartarugas ninjas.jpg" />
+    <Content Include="Imagens\Jogos de PS3 - Tekken 6.jpg" />
+    <Content Include="Imagens\Jogos de PS3 - Tekken Hybrid.jpg" />
+    <Content Include="Imagens\Jogos de PS3 - The Last Of us.jpg" />
+    <Content Include="Imagens\Jogos de PS3 - Thor.jpg" />
+    <Content Include="Imagens\Jogos de PS3 - Tony Hawks Pro Skate HD.jpg" />
+    <Content Include="Imagens\Jogos de PS3 - Tony Hawks Project.jpg" />
+    <Content Include="Imagens\Jogos de PS3 - Tony Hawks Proying Ground.jpg" />
+    <Content Include="Imagens\Jogos de PS3 - transformers.jpg" />
+    <Content Include="Imagens\Jogos de PS3 - Twisted Metal.jpg" />
+    <Content Include="Imagens\Jogos de PS3 - ufc 3.jpg" />
+    <Content Include="Imagens\Jogos de PS3 - Uncharted 1.jpg" />
+    <Content Include="Imagens\Jogos de PS3 - uncharted 2.jpg" />
+    <Content Include="Imagens\Jogos de PS3 - uncharted 3.jpg" />
+    <Content Include="Imagens\Jogos de PS3 - whatch dogs.jpg" />
+    <Content Include="Imagens\jogos de Xbox360\007 Blood Stone.jpg" />
+    <Content Include="Imagens\jogos de Xbox360\Afro Samurai.jpg" />
+    <Content Include="Imagens\jogos de Xbox360\Alice.jpg" />
+    <Content Include="Imagens\jogos de Xbox360\Assassins Creed 2.jpg" />
+    <Content Include="Imagens\jogos de Xbox360\Assassins Creed 3.jpg" />
+    <Content Include="Imagens\jogos de Xbox360\Assassins Creed 4 Black Flag.jpg" />
+    <Content Include="Imagens\jogos de Xbox360\Assassins Creed Brothehood.jpg" />
+    <Content Include="Imagens\jogos de Xbox360\Assassins Creed Ezio Trilogy.jpg" />
+    <Content Include="Imagens\jogos de Xbox360\Assassins Creed Revelations.jpg" />
+    <Content Include="Imagens\jogos de Xbox360\Assassins Creed Rogue.jpg" />
+    <Content Include="Imagens\jogos de Xbox360\Assassins Creed.jpg" />
+    <Content Include="Imagens\jogos de Xbox360\Avengers battle for earth.jpg" />
+    <Content Include="Imagens\jogos de Xbox360\Batman Arkham Asluyim.jpg" />
+    <Content Include="Imagens\jogos de Xbox360\Batman Arkham City.jpg" />
+    <Content Include="Imagens\jogos de Xbox360\Batman Arkham Origens.jpg" />
+    <Content Include="Imagens\jogos de Xbox360\Battlefield 2.jpg" />
+    <Content Include="Imagens\jogos de Xbox360\Battlefield 3.jpg" />
+    <Content Include="Imagens\jogos de Xbox360\Battlefield 4.jpg" />
+    <Content Include="Imagens\jogos de Xbox360\Battlefield Hardline.jpg" />
+    <Content Include="Imagens\jogos de Xbox360\Bayoneta.jpg" />
+    <Content Include="Imagens\jogos de Xbox360\Bordelands game of the year edition.jpg" />
+    <Content Include="Imagens\jogos de Xbox360\Brave.jpg" />
+    <Content Include="Imagens\jogos de Xbox360\Call Of Duty Black Ops 2.jpg" />
+    <Content Include="Imagens\jogos de Xbox360\Call Of Duty Black Ops.jpg" />
+    <Content Include="Imagens\jogos de Xbox360\Call Of Duty Ghosts.jpg" />
+    <Content Include="Imagens\jogos de Xbox360\Call of Duty MW3.jpg" />
+    <Content Include="Imagens\jogos de Xbox360\Clashof the Titans.jpg" />
+    <Content Include="Imagens\jogos de Xbox360\Dantes Inferno.jpg" />
+    <Content Include="Imagens\jogos de Xbox360\Dark Souls 1.jpg" />
+    <Content Include="Imagens\jogos de Xbox360\Dark Souls 2.jpg" />
+    <Content Include="Imagens\jogos de Xbox360\digimon all star.jpg" />
+    <Content Include="Imagens\jogos de Xbox360\Dragon Ball Z Battleof Z.jpg" />
+    <Content Include="Imagens\jogos de Xbox360\Dragon Ball Z Ultimate Tenkachi.jpg" />
+    <Content Include="Imagens\jogos de Xbox360\Duck Tales.jpg" />
+    <Content Include="Imagens\jogos de Xbox360\F1 2014.jpg" />
+    <Content Include="Imagens\jogos de Xbox360\Farcry 3.jpg" />
+    <Content Include="Imagens\jogos de Xbox360\Farcry 4.jpg" />
+    <Content Include="Imagens\jogos de Xbox360\Fifa 2014 brazil.jpg" />
+    <Content Include="Imagens\jogos de Xbox360\Fifa 2015.jpg" />
+    <Content Include="Imagens\jogos de Xbox360\Fifa Street.jpg" />
+    <Content Include="Imagens\jogos de Xbox360\Forza Horizon.jpg" />
+    <Content Include="Imagens\jogos de Xbox360\Gears Of War 2.jpg" />
+    <Content Include="Imagens\jogos de Xbox360\Gears Of War.jpg" />
+    <Content Include="Imagens\jogos de Xbox360\Grid 2.jpg" />
+    <Content Include="Imagens\jogos de Xbox360\GTA4.jpg" />
+    <Content Include="Imagens\jogos de Xbox360\GTA5.jpg" />
+    <Content Include="Imagens\jogos de Xbox360\Guitar Hero 3 Legends Of Rock.jpg" />
+    <Content Include="Imagens\jogos de Xbox360\Guitar Hero 5.jpg" />
+    <Content Include="Imagens\jogos de Xbox360\Guitar Hero 6.jpg" />
+    <Content Include="Imagens\jogos de Xbox360\Guitar Hero World Tour 4.jpg" />
+    <Content Include="Imagens\jogos de Xbox360\Halo 4.jpg" />
+    <Content Include="Imagens\jogos de Xbox360\Halo Reach.jpg" />
+    <Content Include="Imagens\jogos de Xbox360\Halo Wars.jpg" />
+    <Content Include="Imagens\jogos de Xbox360\Halo3.jpg" />
+    <Content Include="Imagens\jogos de Xbox360\Hulk.jpg" />
+    <Content Include="Imagens\jogos de Xbox360\Kinect Adventures.jpg" />
+    <Content Include="Imagens\jogos de Xbox360\Lanterna Verde.jpg" />
+    <Content Include="Imagens\jogos de Xbox360\Mad Max.jpg" />
+    <Content Include="Imagens\jogos de Xbox360\Madagascar 3.jpg" />
+    <Content Include="Imagens\jogos de Xbox360\Mass Effect.jpg" />
+    <Content Include="Imagens\jogos de Xbox360\Metro Last Light.jpg" />
+    <Content Include="Imagens\jogos de Xbox360\Mortal Kombat Komplete edition.jpg" />
+    <Content Include="Imagens\jogos de Xbox360\Mx vs Atv.jpg" />
+    <Content Include="Imagens\jogos de Xbox360\Naruto Rise Of A Ninja.jpg" />
+    <Content Include="Imagens\jogos de Xbox360\Naruto Ultimate Ninja Storm 2.jpg" />
+    <Content Include="Imagens\jogos de Xbox360\Naruto Ultimate Ninja Storm 3.jpg" />
+    <Content Include="Imagens\jogos de Xbox360\Naruto Ultimate Ninja Storm Generetion.jpg" />
+    <Content Include="Imagens\jogos de Xbox360\Naruto Ultimate Ninja Storm Revolution.jpg" />
+    <Content Include="Imagens\jogos de Xbox360\Need For Speed Carbon.jpg" />
+    <Content Include="Imagens\jogos de Xbox360\Need For Speed Hot Pursuit.jpg" />
+    <Content Include="Imagens\jogos de Xbox360\Need For Speed Most Wanted 2.jpg" />
+    <Content Include="Imagens\jogos de Xbox360\Need for Speed Most Wanted.jpg" />
+    <Content Include="Imagens\jogos de Xbox360\Need For Speed Rivals.jpg" />
+    <Content Include="Imagens\jogos de Xbox360\Need for Speed The Run.jpg" />
+    <Content Include="Imagens\jogos de Xbox360\Ninja Blade.jpg" />
+    <Content Include="Imagens\jogos de Xbox360\Ninja Gaiden 3.jpg" />
+    <Content Include="Imagens\jogos de Xbox360\Pes 2015.jpg" />
+    <Content Include="Imagens\jogos de Xbox360\Portal 2.jpg" />
+    <Content Include="Imagens\jogos de Xbox360\prototype 2.jpg" />
+    <Content Include="Imagens\jogos de Xbox360\Prototype.jpg" />
+    <Content Include="Imagens\jogos de Xbox360\Rage.jpg" />
+    <Content Include="Imagens\jogos de Xbox360\Real Steel.jpg" />
+    <Content Include="Imagens\jogos de Xbox360\Resident Evil 6.jpg" />
+    <Content Include="Imagens\jogos de Xbox360\Saint Row 2.jpg" />
+    <Content Include="Imagens\jogos de Xbox360\Saint Row 4.jpg" />
+    <Content Include="Imagens\jogos de Xbox360\Saint Row Gat of Hell.jpg" />
+    <Content Include="Imagens\jogos de Xbox360\Saint Row the third 3.jpg" />
+    <Content Include="Imagens\jogos de Xbox360\Saint Row.jpg" />
+    <Content Include="Imagens\jogos de Xbox360\Shadow of Mordor.jpg" />
+    <Content Include="Imagens\jogos de Xbox360\Shadow Warrior.jpg" />
+    <Content Include="Imagens\jogos de Xbox360\Sniper 2.jpg" />
+    <Content Include="Imagens\jogos de Xbox360\Sonic Generations.jpg" />
+    <Content Include="Imagens\jogos de Xbox360\Sonic Genesis.jpg" />
+    <Content Include="Imagens\jogos de Xbox360\Spider Man.jpg" />
+    <Content Include="Imagens\jogos de Xbox360\Star Strek.jpg" />
+    <Content Include="Imagens\jogos de Xbox360\Super Star Kartz.jpg" />
+    <Content Include="Imagens\jogos de Xbox360\Supreme Commander 2.jpg" />
+    <Content Include="Imagens\jogos de Xbox360\The Crew.jpg" />
+    <Content Include="Imagens\jogos de Xbox360\Thief.jpg" />
+    <Content Include="Imagens\jogos de Xbox360\Thor.jpg" />
+    <Content Include="Imagens\jogos de Xbox360\Tomb Raider.jpg" />
+    <Content Include="Imagens\jogos de Xbox360\tony Hawk american wasteland.jpg" />
+    <Content Include="Imagens\jogos de Xbox360\Tony Hawks Project.jpg" />
+    <Content Include="Imagens\jogos de Xbox360\Tony Hawks Proying Ground.jpg" />
+    <Content Include="Imagens\jogos de Xbox360\Transformers.jpg" />
+    <Content Include="Imagens\jogos de Xbox360\Watch Dogs.jpg" />
+    <Content Include="Imagens\Logotipos\logo.png" />
+    <Content Include="Imagens\mastercard.png" />
+    <Content Include="Imagens\print.gif" />
+    <Content Include="Imagens\Ps3.png" />
+    <Content Include="Imagens\PS4.png" />
+    <Content Include="Imagens\PSP-2000.png" />
+    <Content Include="Imagens\PSVita.png" />
+    <Content Include="Imagens\visa_electron.png" />
+    <Content Include="Imagens\xbox 360.png" />
+    <Content Include="Imagens\Xbox One.png" />
+    <Content Include="Imagens\images%284%29.png" />
+    <Content Include="js\DD_belatedPNG-min.js" />
+    <Content Include="js\functions.js" />
+    <Content Include="js\jquery-1.6.2.min.js" />
+    <Content Include="js\jquery.jcarousel.min.js" />
+    <Content Include="login.aspx" />
+    <Content Include="LOGO.jpg" />
+    <Content Include="Main.aspx" />
+    <Content Include="Controls\Menu.ascx" />
+    <Content Include="MenuCliente.aspx" />
+    <Content Include="Administrativo\Menu_Funcionario.aspx" />
+    <Content Include="Administrativo\Msg_Alterar_Prod.aspx" />
+    <Content Include="Administrativo\Msg_Excluir_Prod.aspx" />
+    <Content Include="Administrativo\msg_Inserir_prod.aspx" />
+    <Content Include="Administrativo\Nota_fiscal_Prevenda.aspx" />
+    <Content Include="pesquisaProd.aspx" />
+    <Content Include="Pre_venda.aspx" />
+    <Content Include="principal.aspx" />
+    <Content Include="Princ_Prod.aspx" />
+    <Content Include="Princ_Prod_marca.aspx" />
+    <Content Include="Princ_Prod_Prevenda.aspx" />
+    <Content Include="Prod_item.aspx" />
+    <Content Include="Rec_Senha.aspx" />
+    <Content Include="Resumo.aspx" />
+    <Content Include="site\Jogos\,E-uX7-XDCwAraKOBMSZgcU_.jpg" />
+    <Content Include="site\Jogos\20100905182531!God_of_War_III_Capa.jpg" />
+    <Content Include="site\Jogos\download.jpg" />
+    <Content Include="site\Jogos\ea-sports-ufc-ps4-15000-MLB20092804531_052014-O.jpg" />
+    <Content Include="site\Jogos\ea-sports-ufc-xbox-one-14989-MLB20092811210_052014-O.jpg" />
+    <Content Include="site\Jogos\Heavy_Rain__96461_zoom.jpg" />
+    <Content Include="site\Jogos\images %281%29.jpg" />
+    <Content Include="site\Jogos\images %2810%29.jpg" />
+    <Content Include="site\Jogos\images %2811%29.jpg" />
+    <Content Include="site\Jogos\images %2813%29.jpg" />
+    <Content Include="site\Jogos\images %2814%29.jpg" />
+    <Content Include="site\Jogos\images %2815%29.jpg" />
+    <Content Include="site\Jogos\images %2816%29.jpg" />
+    <Content Include="site\Jogos\images %2817%29.jpg" />
+    <Content Include="site\Jogos\images %2818%29.jpg" />
+    <Content Include="site\Jogos\images %2819%29.jpg" />
+    <Content Include="site\Jogos\images %282%29.jpg" />
+    <Content Include="site\Jogos\images %2820%29.jpg" />
+    <Content Include="site\Jogos\images %2821%29.jpg" />
+    <Content Include="site\Jogos\images %2822%29.jpg" />
+    <Content Include="site\Jogos\images %2823%29.jpg" />
+    <Content Include="site\Jogos\images %2824%29.jpg" />
+    <Content Include="site\Jogos\images %2825%29.jpg" />
+    <Content Include="site\Jogos\images %2826%29.jpg" />
+    <Content Include="site\Jogos\images %2827%29.jpg" />
+    <Content Include="site\Jogos\images %2829%29.jpg" />
+    <Content Include="site\Jogos\images %283%29.jpg" />
+    <Content Include="site\Jogos\images %2830%29.jpg" />
+    <Content Include="site\Jogos\images %2833%29.jpg" />
+    <Content Include="site\Jogos\images %2834%29.jpg" />
+    <Content Include="site\Jogos\images %2835%29.jpg" />
+    <Content Include="site\Jogos\images %2836%29.jpg" />
+    <Content Include="site\Jogos\images %2837%29.jpg" />
+    <Content Include="site\Jogos\images %2838%29.jpg" />
+    <Content Include="site\Jogos\images %2839%29.jpg" />
+    <Content Include="site\Jogos\images %284%29.jpg" />
+    <Content Include="site\Jogos\images %2841%29.jpg" />
+    <Content Include="site\Jogos\images %2842%29.jpg" />
+    <Content Include="site\Jogos\images %2845%29.jpg" />
+    <Content Include="site\Jogos\images %285%29.jpg" />
+    <Content Include="site\Jogos\images %287%29.jpg" />
+    <Content Include="site\Jogos\images %288%29.jpg" />
+    <Content Include="site\Jogos\images %289%29.jpg" />
+    <Content Include="site\Jogos\maxresdefault.jpg" />
+    <Content Include="site\Jogos\metal_gear_solid_wallpaper_attempt_by_randyadr-d5zdnek.jpg" />
+    <Content Include="site\Jogos\RedDeadRedemptioncover.png" />
+    <Content Include="site\Jogos\splinter-cell-blacklist.jpg" />
+    <Content Include="site\Jogos\thelastofuswallpaper %281%29.png" />
+    <Content Include="Home.aspx" />
+    <Content Include="site\Slide console\Ps3.png" />
+    <Content Include="site\Slide console\PS4.png" />
+    <Content Include="site\Slide console\PSP-2000.png" />
+    <Content Include="site\Slide console\PSVita.png" />
+    <Content Include="site\Slide console\xbox 360.png" />
+    <Content Include="site\Slide console\Xbox One.png" />
+    <Content Include="validacao.js" />
+    <Content Include="WebForm1.aspx" />
+    <Content Include="wucProdutohome.ascx" />
+    <Content Include="Imagens\Logotipos\LOGO.jpg" />
+    <Content Include="site\acessorios\fonte-carregador-notebook-laptop.jpg" />
+    <Content Include="site\consoles\02468.jpg.jpg" />
+    <Content Include="site\consoles\12345.jpg.jpg" />
+    <Content Include="site\consoles\54321.jpg" />
+    <Content Include="site\consoles\56789.jpg" />
+    <Content Include="site\consoles\98765.jpg" />
+    <Content Include="site\consoles\FB_IMG_1428027586621.jpg" />
+    <Content Include="site\consoles\FB_IMG_1428028159268.jpg" />
+    <Content Include="site\consoles\FB_IMG_1428028159268.png" />
+    <Content Include="site\consoles\gt_7245_pt_02.jpg" />
+    <Content Include="site\consoles\nintendo-wii-console.jpg" />
+    <Content Include="site\consoles\novo-xbox-super-slim-hd-500gb-com-70-brindes-12082-MLB20053313896_022014-F.jpg" />
+    <Content Include="site\consoles\playstation-2d[1].gif" />
+    <Content Include="site\consoles\playstation-3-super-slim-250gb-bivolt-1-controle-cabo-hdmi-13888-MLB4467560391_062013-O.jpg" />
+    <Content Include="site\consoles\ps3slide.png" />
+    <Content Include="site\consoles\ps4slide.png" />
+    <Content Include="site\consoles\PSP-2000.jpg" />
+    <Content Include="site\consoles\psvitaslide.png" />
+    <Content Include="site\consoles\slidexbox360.png" />
+    <Content Include="site\consoles\XOneslide.png" />
+    <Content Include="site\Jogos\10245465_666399960064530_2894351393391515342_n.jpg" />
+    <Content Include="site\Jogos\1386008562_1.jpg" />
+    <Content Include="site\Jogos\1389808077_1.jpg" />
+    <Content Include="site\Jogos\20140716_110952_asm2-fob-ps4.jpg" />
+    <Content Include="site\Jogos\jogo-ps3-need-for-speed-shift-novo-15013-MLB20095466006_052014-O.jpg" />
+    <Content Include="site\Jogos\ku-xlarge%284%29.jpg" />
+    <Content Include="site\Jogos\lego_marvel_ps4__13576_zoom.jpg" />
+    <Content Include="site\Jogos\Trials-Fusion-Review-PS4-437988-2.jpg" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Administrativo\Adm.Master.cs">
+      <DependentUpon>Adm.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrativo\Adm.Master.designer.cs">
+      <DependentUpon>Adm.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Administrativo\Add_Cargo.aspx.cs">
+      <DependentUpon>Add_Cargo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrativo\Add_Cargo.aspx.designer.cs">
+      <DependentUpon>Add_Cargo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrativo\add_categorias_marcas.aspx.cs">
+      <DependentUpon>add_categorias_marcas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrativo\add_categorias_marcas.aspx.designer.cs">
+      <DependentUpon>add_categorias_marcas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrativo\Cad_Promocao.aspx.cs">
+      <DependentUpon>Cad_Promocao.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrativo\Cad_Promocao.aspx.designer.cs">
+      <DependentUpon>Cad_Promocao.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrativo\contatar_Fornecedor.aspx.cs">
+      <DependentUpon>contatar_Fornecedor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrativo\contatar_Fornecedor.aspx.designer.cs">
+      <DependentUpon>contatar_Fornecedor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrativo\Control_prevenda.aspx.cs">
+      <DependentUpon>Control_prevenda.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrativo\Control_prevenda.aspx.designer.cs">
+      <DependentUpon>Control_prevenda.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrativo\Detalhe_Pre_vendas.aspx.cs">
+      <DependentUpon>Detalhe_Pre_vendas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrativo\Detalhe_Pre_vendas.aspx.designer.cs">
+      <DependentUpon>Detalhe_Pre_vendas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrativo\Edit_Site.aspx.cs">
+      <DependentUpon>Edit_Site.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrativo\Edit_Site.aspx.designer.cs">
+      <DependentUpon>Edit_Site.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrativo\ADM\Relatorios\Detalhe_Venda.aspx.cs">
+      <DependentUpon>Detalhe_Venda.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrativo\ADM\Relatorios\Detalhe_Venda.aspx.designer.cs">
+      <DependentUpon>Detalhe_Venda.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrativo\ADM\Relatorios\Menu_Relatorios.aspx.cs">
+      <DependentUpon>Menu_Relatorios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrativo\ADM\Relatorios\Menu_Relatorios.aspx.designer.cs">
+      <DependentUpon>Menu_Relatorios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrativo\ADM\Relatorios\Prod_mais_Vend.aspx.cs">
+      <DependentUpon>Prod_mais_Vend.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrativo\ADM\Relatorios\Prod_mais_Vend.aspx.designer.cs">
+      <DependentUpon>Prod_mais_Vend.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrativo\ADM\Relatorios\Rel_Cli.aspx.cs">
+      <DependentUpon>Rel_Cli.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrativo\ADM\Relatorios\Rel_Cli.aspx.designer.cs">
+      <DependentUpon>Rel_Cli.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrativo\ADM\Relatorios\Rel_prod_enviados.aspx.cs">
+      <DependentUpon>Rel_prod_enviados.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrativo\ADM\Relatorios\Rel_prod_enviados.aspx.designer.cs">
+      <DependentUpon>Rel_prod_enviados.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrativo\ADM\Relatorios\Rel_Vendas.aspx.cs">
+      <DependentUpon>Rel_Vendas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrativo\ADM\Relatorios\Rel_Vendas.aspx.designer.cs">
+      <DependentUpon>Rel_Vendas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrativo\ADM\Relatorios\Rel_Produtos.aspx.cs">
+      <DependentUpon>Rel_Produtos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrativo\ADM\Relatorios\Rel_Produtos.aspx.designer.cs">
+      <DependentUpon>Rel_Produtos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrativo\ADM\Relatorios\Rel_func.aspx.cs">
+      <DependentUpon>Rel_func.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrativo\ADM\Relatorios\Rel_func.aspx.designer.cs">
+      <DependentUpon>Rel_func.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrativo\ADM\Relatorios\Rl_Cli_Compraram_mais.aspx.cs">
+      <DependentUpon>Rl_Cli_Compraram_mais.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrativo\ADM\Relatorios\Rl_Cli_Compraram_mais.aspx.designer.cs">
+      <DependentUpon>Rl_Cli_Compraram_mais.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrativo\Avisos.aspx.cs">
+      <DependentUpon>Avisos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrativo\Avisos.aspx.designer.cs">
+      <DependentUpon>Avisos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrativo\Detalhe_Pedido.aspx.cs">
+      <DependentUpon>Detalhe_Pedido.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrativo\Detalhe_Pedido.aspx.designer.cs">
+      <DependentUpon>Detalhe_Pedido.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrativo\Envio de_Prevendas.aspx.cs">
+      <DependentUpon>Envio de_Prevendas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrativo\Envio de_Prevendas.aspx.designer.cs">
+      <DependentUpon>Envio de_Prevendas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrativo\MsgPedidoFinalizado.aspx.cs">
+      <DependentUpon>MsgPedidoFinalizado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrativo\MsgPedidoFinalizado.aspx.designer.cs">
+      <DependentUpon>MsgPedidoFinalizado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrativo\Consultar_Cliente.aspx.cs">
+      <DependentUpon>Consultar_Cliente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrativo\Consultar_Cliente.aspx.designer.cs">
+      <DependentUpon>Consultar_Cliente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrativo\MsgPedidoEnviado.aspx.cs">
+      <DependentUpon>MsgPedidoEnviado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrativo\MsgPedidoEnviado.aspx.designer.cs">
+      <DependentUpon>MsgPedidoEnviado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrativo\Nota_Fiscal.aspx.cs">
+      <DependentUpon>Nota_Fiscal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrativo\Nota_Fiscal.aspx.designer.cs">
+      <DependentUpon>Nota_Fiscal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrativo\Produtos_para_Envio.aspx.cs">
+      <DependentUpon>Produtos_para_Envio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrativo\Produtos_para_Envio.aspx.designer.cs">
+      <DependentUpon>Produtos_para_Envio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrativo\Pedidos.aspx.cs">
+      <DependentUpon>Pedidos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrativo\Pedidos.aspx.designer.cs">
+      <DependentUpon>Pedidos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrativo\Relatorios.master.cs">
+      <DependentUpon>Relatorios.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrativo\Relatorios.master.designer.cs">
+      <DependentUpon>Relatorios.master</DependentUpon>
+    </Compile>
+    <Compile Include="Administrativo\WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrativo\WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Boleto.aspx.cs">
+      <DependentUpon>Boleto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Boleto.aspx.designer.cs">
+      <DependentUpon>Boleto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CadCliente.aspx.cs">
+      <DependentUpon>CadCliente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CadCliente.aspx.designer.cs">
+      <DependentUpon>CadCliente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Carrega_foto.ascx.cs">
+      <DependentUpon>Carrega_foto.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Carrega_foto.ascx.designer.cs">
+      <DependentUpon>Carrega_foto.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Carrinho_de_Compras.aspx.cs">
+      <DependentUpon>Carrinho_de_Compras.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Carrinho_de_Compras.aspx.designer.cs">
+      <DependentUpon>Carrinho_de_Compras.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cart.aspx.cs">
+      <DependentUpon>Cart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cart.aspx.designer.cs">
+      <DependentUpon>Cart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cliente\Cad_Cliente.aspx.cs">
+      <DependentUpon>Cad_Cliente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cliente\Cad_Cliente.aspx.designer.cs">
+      <DependentUpon>Cad_Cliente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrativo\Cad_Fornecedor.aspx.cs">
+      <DependentUpon>Cad_Fornecedor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrativo\Cad_Fornecedor.aspx.designer.cs">
+      <DependentUpon>Cad_Fornecedor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrativo\Cad_funcionario.aspx.cs">
+      <DependentUpon>Cad_funcionario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrativo\Cad_funcionario.aspx.designer.cs">
+      <DependentUpon>Cad_funcionario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrativo\Cad_Produtos.aspx.cs">
+      <DependentUpon>Cad_Produtos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrativo\Cad_Produtos.aspx.designer.cs">
+      <DependentUpon>Cad_Produtos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrativo\Consultar_Prod.aspx.cs">
+      <DependentUpon>Consultar_Prod.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrativo\Consultar_Prod.aspx.designer.cs">
+      <DependentUpon>Consultar_Prod.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cliente\Historico_Cli.aspx.cs">
+      <DependentUpon>Historico_Cli.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cliente\Historico_Cli.aspx.designer.cs">
+      <DependentUpon>Historico_Cli.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cliente\Menu_Cli.aspx.cs">
+      <DependentUpon>Menu_Cli.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cliente\Menu_Cli.aspx.designer.cs">
+      <DependentUpon>Menu_Cli.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cliente\Menu_cli.Master.cs">
+      <DependentUpon>Menu_cli.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cliente\Menu_cli.Master.designer.cs">
+      <DependentUpon>Menu_cli.Master</DependentUpon>
+    </Compile>
+    <Compile Include="clsEmail.cs" />
+    <Compile Include="Contato.aspx.cs">
+      <DependentUpon>Contato.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contato.aspx.designer.cs">
+      <DependentUpon>Contato.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ClientTabs.cs" />
+    <Compile Include="Controls\MenuMarca.ascx.cs">
+      <DependentUpon>MenuMarca.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\MenuMarca.ascx.designer.cs">
+      <DependentUpon>MenuMarca.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\NewWindowLink.cs" />
+    <Compile Include="Controls\OpenWebWindow.cs" />
+    <Compile Include="Controls\Pre_venda.ascx.cs">
+      <DependentUpon>Pre_venda.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Pre_venda.ascx.designer.cs">
+      <DependentUpon>Pre_venda.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\WebWindow.cs" />
+    <Compile Include="Copy of Msg_Alterar_Prod.aspx.cs">
+      <DependentUpon>Copy of Msg_Alterar_Prod.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Copy of Msg_Alterar_Prod.aspx.designer.cs">
+      <DependentUpon>Copy of Msg_Alterar_Prod.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Descricao_Prod.aspx.cs">
+      <DependentUpon>Descricao_Prod.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Descricao_Prod.aspx.designer.cs">
+      <DependentUpon>Descricao_Prod.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="home.Master.cs">
+      <DependentUpon>home.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="home.Master.designer.cs">
+      <DependentUpon>home.Master</DependentUpon>
+    </Compile>
+    <Compile Include="login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Main.aspx.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Main.aspx.designer.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Menu.ascx.cs">
+      <DependentUpon>Menu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Menu.ascx.designer.cs">
+      <DependentUpon>Menu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MenuCliente.aspx.cs">
+      <DependentUpon>MenuCliente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MenuCliente.aspx.designer.cs">
+      <DependentUpon>MenuCliente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrativo\Menu_Funcionario.aspx.cs">
+      <DependentUpon>Menu_Funcionario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrativo\Menu_Funcionario.aspx.designer.cs">
+      <DependentUpon>Menu_Funcionario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrativo\Msg_Alterar_Prod.aspx.cs">
+      <DependentUpon>Msg_Alterar_Prod.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrativo\Msg_Alterar_Prod.aspx.designer.cs">
+      <DependentUpon>Msg_Alterar_Prod.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrativo\Msg_Excluir_Prod.aspx.cs">
+      <DependentUpon>Msg_Excluir_Prod.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrativo\Msg_Excluir_Prod.aspx.designer.cs">
+      <DependentUpon>Msg_Excluir_Prod.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrativo\msg_Inserir_prod.aspx.cs">
+      <DependentUpon>msg_Inserir_prod.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrativo\msg_Inserir_prod.aspx.designer.cs">
+      <DependentUpon>msg_Inserir_prod.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrativo\Nota_fiscal_Prevenda.aspx.cs">
+      <DependentUpon>Nota_fiscal_Prevenda.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrativo\Nota_fiscal_Prevenda.aspx.designer.cs">
+      <DependentUpon>Nota_fiscal_Prevenda.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pesquisaProd.aspx.cs">
+      <DependentUpon>pesquisaProd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pesquisaProd.aspx.designer.cs">
+      <DependentUpon>pesquisaProd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pre_venda.aspx.cs">
+      <DependentUpon>Pre_venda.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pre_venda.aspx.designer.cs">
+      <DependentUpon>Pre_venda.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="principal.aspx.cs">
+      <DependentUpon>principal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="principal.aspx.designer.cs">
+      <DependentUpon>principal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Princ_Prod.aspx.cs">
+      <DependentUpon>Princ_Prod.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Princ_Prod.aspx.designer.cs">
+      <DependentUpon>Princ_Prod.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Princ_Prod_marca.aspx.cs">
+      <DependentUpon>Princ_Prod_marca.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Princ_Prod_marca.aspx.designer.cs">
+      <DependentUpon>Princ_Prod_marca.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Princ_Prod_Prevenda.aspx.cs">
+      <DependentUpon>Princ_Prod_Prevenda.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Princ_Prod_Prevenda.aspx.designer.cs">
+      <DependentUpon>Princ_Prod_Prevenda.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Prod_item.aspx.cs">
+      <DependentUpon>Prod_item.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Prod_item.aspx.designer.cs">
+      <DependentUpon>Prod_item.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Rec_Senha.aspx.cs">
+      <DependentUpon>Rec_Senha.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rec_Senha.aspx.designer.cs">
+      <DependentUpon>Rec_Senha.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Resumo.aspx.cs">
+      <DependentUpon>Resumo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Resumo.aspx.designer.cs">
+      <DependentUpon>Resumo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Submain.master.cs">
+      <DependentUpon>Submain.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Submain.master.designer.cs">
+      <DependentUpon>Submain.master</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="wucProdutohome.ascx.cs">
+      <DependentUpon>wucProdutohome.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="wucProdutohome.ascx.designer.cs">
+      <DependentUpon>wucProdutohome.ascx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Cliente\Web.config" />
+    <Content Include="Administrativo\Adm.Master" />
+    <Content Include="Cliente\Menu_cli.Master" />
+    <Content Include="Administrativo\Relatorios.master" />
+    <Content Include="home.Master" />
+    <Content Include="Submain.master" />
+    <Content Include="Site.Master" />
+    <Content Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Projeto.SGB.Dao\Projeto.SGB.Dao.csproj">
+      <Project>{e38a529d-ba47-412b-9d83-d5b7026e45f5}</Project>
+      <Name>Projeto.SGB.Dao</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Global.asax.resx">
+      <DependentUpon>Global.asax.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Relatorio.rdlc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Administrativo\OPER\" />
+    <Folder Include="File\" />
+    <Folder Include="relatorios gerados\" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="CobreBemX">
+      <Guid>{97B92612-EA6B-4E12-B759-91B91554DE0D}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="css\fonts\myriadpro-semiboldcond-webfont.eot" />
+    <Content Include="css\fonts\myriadpro-semiboldcond-webfont.ttf" />
+    <Content Include="css\fonts\myriadpro-semiboldcond-webfont.woff" />
+    <Content Include="css\images\modelofundoparaslide.psd" />
+    <Content Include="css\images\modeloSlide.psd" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>55118</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

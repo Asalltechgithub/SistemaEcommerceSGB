@@ -1,0 +1,177 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/main.Master" AutoEventWireup="true" CodeBehind="Submain.master.cs" Inherits="WebApplication4.Submain" %>
+
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder3" runat="server">
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
+</asp:Content>
+<asp:Content ID="Content4" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+<form id="form1" runat="server" style="text-align: center">
+            <div id="main">
+			<!-- Slider -->
+			    <div id="slider-holder">
+                    <div id="slider">
+                        <ul>
+                            <li>
+                                <img src="site/Slide%20console/PS4.png"  
+                                alt="Beautiful white case with flowers" />
+                                <div class="caption">
+                                    <p>
+                                        For Real Gamers</p>
+                                    <p class="model">
+                                        Lian-Li PC-7FW Midi Tower</p>
+                                    <a title="Buy Now!" class="buy-now" href="#">buy now!</a>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="site/Slide%20console/Xbox%20One.png" 
+                                alt="Computer case with cartoon characters" />
+                                <div class="caption">
+                                    <p>
+                                        For Gamers</p>
+                                    <p class="model">
+                                        Lian-Li PC-7FW Tower</p>
+                                    <a title="Buy Now!" class="buy-now" href="#">buy now!</a>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="site/Slide%20console/PSVita.png" 
+                                alt="Beautiful white case with flowers" />
+                                <div class="caption">
+                                    <p>
+                                        For Real Gamers</p>
+                                    <p class="model">
+                                        Gamers PC-7FW Midi Tower</p>
+                                    <a title="Buy Now!" class="buy-now" href="#">buy now!</a>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="site/Slide%20console/Ps3.png" 
+                                alt="Computer case with cartoon characters" />
+                                <div class="caption">
+                                    <p>
+                                        For Fun</p>
+                                    <p class="model">
+                                        Lian-Li PC-7FW Midi Tower</p>
+                                    <a title="Buy Now!" class="buy-now" href="#">buy now!</a>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="site/Slide%20console/xbox%20360.png" 
+                                alt="Beautiful white case with flowers" />
+                                <div class="caption">
+                                    <p>
+                                        For Work</p>
+                                    <p class="model">
+                                        Lian-Li PC-7FW Midi Tower</p>
+                                    <a title="Buy Now!" class="buy-now" href="#">buy now!</a>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="slider-controls">
+                            <a title="slide 1" href="#">1</a> <a title="slide 2" href="#">2</a> <a title="slide 3" href="#">3</a> <a title="slide 4" href="#">4</a> <a title="slide 5" href="#">5</a>
+                        </div>
+                        <a title="Previous Slide" id="prev" href="#">prev</a> <a title="Next Slide" id="next" href="#">next</a>
+                    </div>
+                </div>
+			<!-- END Slider -->
+			<!-- Content -->
+			    <div id="content">
+                    <div class="post">
+                        <ul id="Ul1"  runat="server" style="border-style: solid;">
+                            <li>
+                                <asp:LinkButton ID="lnkNomeusu" runat="server">LinkButton</asp:LinkButton>
+                            </li>
+                            <li>0 items R$ 0,00<asp:Label ID="Label1" runat="server" Text="Label" Visible="False"></asp:Label>
+                            </li>
+                            <li style="font-size: medium; text-align: center;" >
+                                <asp:LinkButton ID="LnkCadastro" runat="server" onclick="LinkButton1_Click" PostBackUrl="~/CadCliente.aspx">Cadastrar</asp:LinkButton>
+                            </li>
+                            <li style="font-size: medium" >
+                                <asp:LinkButton ID="LinkButton1" runat="server" onclick="LinkButton1_Click">Minha Conta</asp:LinkButton>
+                            </li>
+                            <li><a class="cart" href="#" title="shopping cart">shopping cart </a></li>
+                            <li style="text-align: center"><a class="end" href="Carrinho.aspx" title="checkout">checkout</a></li>
+                            <li style="font-size: medium; text-align: center;" >
+                                <asp:LinkButton ID="LinkButton2" runat="server" onclick="LinkButton2_Click">Logout</asp:LinkButton>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+			<!-- ЕND Content  -->
+			<!-- Sidebar -->
+			    <div id="sidebar">
+                    <div id="Div1" class="box" runat="server">
+                        <userControl:Menu runat="server" ID="Menu" />
+                    </div>
+                </div>
+			<!-- END Sidebar -->
+			    <div class="cl">
+                </div>
+			<!-- Latest Products -->
+                      
+			
+                
+                            
+			<!-- END Latest Products -->
+			<!-- Feartured Products -->
+			    <div class="products featured">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder4" runat="server">
+                    </asp:ContentPlaceHolder>
+                    <h2>Featured Products</h2>
+                    <div class="products-slider">
+                        <ul>
+                            <li><a title="Details" href="#">
+                                <img src="Imagens/Jogos%20de%20PS4/Battlefield%204.jpg" alt="Silver half transparent with blue lights computer case" /></a>
+                                <p>
+                                    Model Name</p>
+                            </li>
+                            <li><a title="Details" href="#">
+                                <img src="Imagens/Jogos%20de%20XBox%20One/Fifa%2015.jpg" alt="Solid brown computer case" /></a>
+                                <p>
+                                    Model Name</p>
+                            </li>
+                            <li><a title="Details" href="#">
+                                <img src="Imagens/Jogos de XBox One/UFC.jpg" alt="Computer case with a fan on the side and blue lights" /></a>
+                                <p>
+                                    Model Name</p>
+                            </li>
+                            <li><a title="Details" href="#">
+                                <img src="Imagens/Jogos de PS3/Formula 2014.jpg" alt="Half transparent black computer case" /></a>
+                                <p>
+                                    Model Name</p>
+                            </li>
+                            <li><a title="Details" href="#">
+                                <img src="Imagens/Jogos%20de%20PS4/UFC.jpg" alt="Compyter case with three extra fans and blue lights" /></a>
+                                <p>
+                                    Model Name</p>
+                            </li>
+                            <li><a title="Details" href="#">
+                                <img src="Imagens/jogos de Xbox360/GTA5.jpg" alt="Silver half transparent with blue lights computer case" /></a>
+                                <p>
+                                    Model Name</p>
+                            </li>
+                            <li><a title="Details" href="#">
+                                <img src="Imagens/jogos de Xbox360/Tomb Raider.jpg" alt="Solid brown computer case" /></a>
+                                <p>
+                                    Model Name</p>
+                            </li>
+                            <li><a title="Details" href="#">
+                                <img src="Imagens/Jogos de PS3/uncharted 3.jpg" alt="Computer case with a fan on the side and blue lights" /></a>
+                                <p>
+                                    Model Name</p>
+                            </li>
+                            <li><a title="Details" href="#">
+                                <img src="Imagens/Jogos de XBox One/GTA5.jpg" alt="Half transparent black computer case" /></a>
+                                <p>
+                                    Model Name</p>
+                            </li>
+                            <li><a title="Details" href="#">
+                                <img src="Imagens/Jogos de PS4/Call of Duty Advanced Warfare.jpg" alt="Computer case with three extra fans and blue lights" /></a>
+                                <p>
+                                    Model Name</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+    </form>
+</asp:Content>

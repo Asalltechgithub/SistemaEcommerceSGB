@@ -1,0 +1,260 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="WebApplication4.Site" %>
+<%@ Register assembly="AjaxControlToolkit" namespace="AjaxControlToolkit" tagprefix="asp" %>
+<%@ Register Src="~/Controls/Pre_venda.ascx" TagPrefix="userControl" TagName="Pre_venda" %>
+<%@ Register Src="~/Controls/MenuMarca.ascx" TagPrefix="userControl" TagName="MenuMarca" %>
+
+
+
+
+<!DOCTYPE html>
+
+
+<html lang="en-US" xmlns="http://www.w3.org/1999/xhtml" dir="ltr">
+<head>
+	<title>The Globo Games </title>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<link rel="shortcut icon" href="css/images/favicon.ico" />
+	<link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+	
+	<script src="js/jquery-1.6.2.min.js" type="text/javascript" charset="utf-8"></script>
+	<!--[if IE 6]>
+		<script src="js/DD_belatedPNG-min.js" type="text/javascript" charset="utf-8"></script>
+	<![endif]-->
+	<script src="js/jquery.jcarousel.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/functions.js" type="text/javascript" charset="utf-8"></script>
+    <style type="text/css">
+        .auto-style1
+        {
+            text-align: left;
+        }
+    </style>
+<%--    <script type="text/javascript">
+
+        function PermiteSomenteNumeros(event) {
+            var charCode = (event.which) ? event.which : event.keyCode
+            if (charCode > 31 && (charCode < 48 || charCode > 57))
+                return false; return true;
+        }
+
+    </script>--%>
+
+</head>
+<body>
+    <form id="form1" runat="server">
+	<asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+    <!-- Begin Wrapper -->
+	<div id="wrapper">
+		<!-- Begin Search -->
+		<div id="search">
+			<div class="shell">
+				
+					<div class="container">
+                        <asp:TextBox ID="txtpesq" runat="server" OnTextChanged="txtpesq_TextChanged"></asp:TextBox>
+					</div>
+                <asp:LinkButton ID="LinkButton4" runat="server" OnClick="LinkButton4_Click">Pesquisar</asp:LinkButton>
+				
+				<div class="cl">&nbsp;</div>
+			</div>
+		</div>
+		<!-- End Search -->
+		<!-- Begin Header -->
+		<div id="header" class="shell">
+			 <asp:DataList ID="DataList1" runat="server" DataSourceID="ds_Logo">
+                    <ItemTemplate>
+                        <br />
+                        <br />
+                        <asp:ImageButton ID="ImageButton1" runat="server" Height="43px" Width="182px" ImageUrl= '<%# Eval("Logo_Site") %>' PostBackUrl="~/principal.aspx" />
+                    </ItemTemplate>
+                </asp:DataList>
+                <asp:SqlDataSource runat="server" ID="ds_Logo" ConnectionString='<%$ ConnectionStrings:BD_SGBConnectionString %>' SelectCommand="SELECT * FROM [Tb_Logotipo_Empresa]"></asp:SqlDataSource>
+		</div>
+		<!-- End Header -->
+		<!-- Begin Navigation -->
+		<div id="navigation">
+			<div class="shell">
+				<ul>
+					<userControl:Menu runat="server" ID="Menu1" />
+                    <userControl:Pre_venda runat="server" ID="Pre_venda" /> 
+                   
+                        <asp:Label ID="lblBemVindo" runat="server" Text="Bem Vindo, " Visible="False"></asp:Label>
+&nbsp;<asp:LinkButton ID="lnkNomeusu" runat="server" OnClick="lnkNomeusu_Click" Font-Bold="True" Font-Size="Large" ForeColor="#639731">LinkButton</asp:LinkButton> 
+				</ul>
+
+				<div class="cl">&nbsp;</div>
+			</div>
+		</div>
+		<!-- End Navigation -->
+		<!-- Begin Slider -->
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+
+        </asp:ContentPlaceHolder>
+		<!-- End Slider -->
+		<!-- Begin Main -->
+		<div id="main">
+			<!-- Begin Inner -->
+			<div class="inner">
+				<div class="shell">
+					<!-- Begin Left Sidebar -->
+					<div id="left-sidebar" class="sidebar">
+						<ul>
+							<li class="widget">
+								<h2>Marcas</h2>
+								<div class="widget-entry">
+									<ul>
+                                        <userControl:MenuMarca runat="server" id="MenuMarca" />
+									</ul>
+								</div>
+							</li>
+							<li class="widget">
+								<h2>Information</h2>
+								<div class="widget-entry">
+									<ul style="text-align: center">
+										
+                            <li>
+                                <asp:Label ID="Lblitens" runat="server" Text=" 0 "/> items  R$<asp:Label ID="lblvaltotal" runat="server" Text="0,00"></asp:Label> <asp:Label ID="Label1" runat="server" Text="Label" Visible="False"></asp:Label>
+                            </li>
+                            <li style="font-size: medium; text-align: center;" >
+                                <asp:LinkButton ID="LnkCadastro" runat="server" onclick="LinkButton1_Click" PostBackUrl="~/CadCliente.aspx" CssClass="auto-style1">Cadastrar</asp:LinkButton>
+                            </li>
+                            <li style="font-size: medium" >
+                                <asp:LinkButton ID="lblogin" runat="server"  CssClass="auto-style1" PostBackUrl="~/login.aspx"> Fazer Login</asp:LinkButton>
+                            </li>
+                            <li style="font-size: medium" >
+                                <asp:LinkButton ID="LinkButton1" runat="server" onclick="LinkButton1_Click" CssClass="auto-style1">Minha Conta</asp:LinkButton>
+                            </li>
+                            <li>
+                                <asp:LinkButton ID="LnkCarrinho" runat="server" PostBackUrl="~/Carrinho_de_Compras.aspx" CssClass="auto-style1">Carrinho</asp:LinkButton></li>
+                                                       <li style="font-size: medium; text-align: left;" >
+
+                                <asp:LinkButton ID="LinkButton3" runat="server" PostBackUrl="~/Resumo.aspx" OnClick="LinkButton3_Click">checkout</asp:LinkButton></li>
+                            <li style="font-size: medium; text-align: left;" >
+                                <asp:LinkButton ID="LinkButton2" runat="server" onclick="LinkButton2_Click" CssClass="auto-style1">Logout</asp:LinkButton>
+                            </li>
+                             <li>
+                                <asp:LinkButton ID="LnkbContato" runat="server" PostBackUrl="~/Contato.aspx" CssClass="auto-style1">Contato</asp:LinkButton></li>
+
+							
+								</div>
+							</li>
+							
+						</ul>
+					</div>
+					<!-- End Sidebar -->
+					<!-- Begin Content -->
+					<div id="content">
+						<!-- Begin Post -->
+						
+						<!-- End Post -->
+						<!-- Begin Products -->
+						<div id="products">
+							<asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+
+						</asp:ContentPlaceHolder>
+            
+							<div class="cl">&nbsp;</div>
+						</div>
+						<!-- End Products -->
+					</div>
+					<!-- End Content -->
+					<!-- Begin Right Sidebar -->
+					<div id="right-sidebar" class="sidebar">
+						<ul>
+							<li class="widget products-box">
+								<h2>Mais vendidos</h2>
+                                     <br />
+								<div class="widget-entry">
+                                    
+									<asp:DataList ID="DataList2" runat="server" DataSourceID="dsProd_Mais_Vend" style="text-align: left; color: #00FF00;" Enabled="False">
+                                        <ItemTemplate>
+                                           
+										
+											<a href="#"title='<%# Eval("Nome_Prod_Estq") %>'>
+                                           
+												<span class="info">
+													<span class="title">
+                                                        <asp:Label ID="Label2" runat="server" Text='<%# Eval("Nome_Prod_Estq") %>' style="color: #00FF00"></asp:Label></span>
+												</span>
+												<span class="cl">&nbsp;</span>
+											</a>
+										
+                                                
+                                           
+                                            <br />
+                                            <br />
+                                           
+                                        </ItemTemplate>
+                                    </asp:DataList>
+                                    </div>
+                                </li>
+                                        </ul>
+<asp:SqlDataSource ID="dsProd_Mais_Vend" runat="server" ConnectionString="<%$ ConnectionStrings:BD_SGBConnectionString %>" SelectCommand="SELECT TOP (10) u.Nome_Prod_Estq, COUNT(p.Produto) AS qtde FROM Tb_lista_Historico AS p INNER JOIN Tb_Prod_Estoque AS u ON u.Id_Prod_Estq = p.Cod_prd WHERE (p.Cod_Pedido &lt;&gt; 0) GROUP BY u.Nome_Prod_Estq ORDER BY qtde DESC"></asp:SqlDataSource>
+									<div class="cl">&nbsp;</div>
+								
+							
+							
+                        <li class="widget products-box">
+								<h2>Pré Vendas</h2>
+                           
+								<div class="widget-entry">
+									<ul>
+										<asp:DataList ID="DataList3" runat="server" DataSourceID="dsMenuPrevenda">
+<ItemTemplate>
+                                           
+										<li>
+											<a href='<%# Eval ("Id_Prod_Estq" , "Pre_venda.aspx?Id_Prod_Estq={0}") %>' title="Featured Product 1">
+												<br>
+												</br> 	
+                                                 <asp:ImageButton ID="ImageButton2" runat="server" Height="46px" ImageUrl='<%# Eval("Foto_Prod_Estoq") %>' style="text-align: left" Width="51px" PostBackUrl= '<%# Eval ("Id_Prod_Estq" , "Pre_venda.aspx?Id_Prod_Estq={0}") %>' />
+												<span class="info">
+													<span class="title">
+                                                        <asp:Label ID="Label2" runat="server" Text='<%# Eval("Nome_Prod_Estq") %>'></asp:Label></span>
+													<span class="price"><span>R$</span><asp:Label ID="Label3" runat="server" Text='<%# Eval("Valor_Venda_Prod_Estoq") %>'></asp:Label></span>
+												</span>
+												<span class="cl">&nbsp;</span>
+											</a>
+										</li>
+                                                
+                                           
+                                            <br />
+                                            <br />
+                                           
+                                        </ItemTemplate>
+
+										</asp:DataList>
+
+									    <asp:SqlDataSource ID="dsMenuPrevenda" runat="server" ConnectionString="<%$ ConnectionStrings:BD_SGBConnectionString %>" SelectCommand="SELECT [Nome_Prod_Estq], [Foto_Prod_Estoq], [Valor_Venda_Prod_Estoq], [Id_Prod_Estq] FROM [Tb_Prod_Estoque] WHERE ([Tipo_Venda] = @Tipo_Venda) and Qtd_Prod_Estoq &lt;&gt;0">
+                                            <SelectParameters>
+                                                <asp:Parameter DefaultValue="2" Name="Tipo_Venda" Type="Int32" />
+                                            </SelectParameters>
+                                        </asp:SqlDataSource>
+
+									</ul>
+
+                                    
+								</div>
+                    
+							</li>
+					</div>
+                
+					<!-- End Sidebar -->
+					<div class="cl">&nbsp;</div>
+				</div>
+			</div>
+			<!-- End Inner -->
+		</div>
+		<!-- End Main -->
+		<!-- Begin Footer -->
+		<div id="footer">
+			<div class="shell">
+				<p class="bottom-menu"><a href="#" title="Home">Home<a href="#" title="Special Offers">Special Offers</a><span>|</span><a href="#" title="Log In">Log In</a><span>|</span><a href="#" title="Account">Account</a><span>|</span><a href="#" title="Basket">Basket</a><span>|</span><a href="#" title="Checkout">Checkout</a><span>|</span><a href="#" title="Contact">Contact</a></p>
+				<p>Copyright &copy; PC Store 2012. Design by: <a href="http://css-free-templates.com/" title="CSS Free Templates">The Globo Games </a>. Todos os direitos Reservados. </p>
+				<div class="cl">&nbsp;</div>
+			</div>
+		</div>
+		<!-- End Footer -->
+	
+	</form>
+    <!-- End Wrapper -->
+</body>
+    
+</html>
